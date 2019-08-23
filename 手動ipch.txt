@@ -1,0 +1,19 @@
+
+#修改設定檔
+vim /etc/sysconfig/network-scripts/ifcfg-eno16777736
+
+#修改參數
+BOOTPROTO="static"
+
+
+#加在最後面
+#範例]IPADDR=192.168.0.0
+
+IPADDR=自己IP
+
+NETMASK=255.255.255.0
+
+NM_CONTROLLED=no
+
+#重新啟動網路卡
+systemctl restart network.service
